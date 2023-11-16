@@ -1,4 +1,3 @@
-// components/UserManagement.js
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import api from '../Services/api';
@@ -7,20 +6,15 @@ const UserManagement = () => {
   const [users, setUsers] = useState([]);
   const [newUser, setNewUser] = useState({
     username: '',
-    // Add additional fields as needed (e.g., name, password)
   });
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check authentication status here
-    const isAuthenticated = true; // Replace with your actual authentication logic
-
+    const isAuthenticated = true; 
     if (!isAuthenticated) {
-      // If not authenticated, redirect to login
       navigate('/login');
     } else {
-      // If authenticated, fetch user data
       fetchUsers();
     }
   }, [navigate]);
@@ -45,10 +39,8 @@ const UserManagement = () => {
 
   const handleAddUser = async () => {
     try {
-      // Send a request to your API to create a new user
       await api.post('/users', newUser);
-      // Clear the form and fetch updated user data
-      setNewUser({ username: '' }); // Add additional fields as needed
+      setNewUser({ username: '' }); 
       fetchUsers();
     } catch (error) {
       console.error('Error adding user', error);

@@ -1,4 +1,3 @@
-// components/Login.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -11,12 +10,12 @@ const Login = ({ checkAuthentication }) => {
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:3001/users/login', { username, password });
-      console.log(response.data); // Actions after successful login
+      console.log(response.data); 
       setError(null);
-      checkAuthentication(); // Update authentication status
+      checkAuthentication(); 
     } catch (error) {
       console.error('Login error', error);
-      setError('Invalid username or password. Please try again.'); // Set error message
+      setError('Invalid username or password. Please try again.'); 
     }
   };
 

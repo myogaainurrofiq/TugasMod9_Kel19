@@ -1,4 +1,3 @@
-// components/EditUser.js
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import api from '../Services/api';
@@ -8,12 +7,11 @@ const EditUser = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
     username: '',
-    name: '', // Add additional fields as needed (e.g., name, password)
+    name: '',
     password: '',
   });
 
   useEffect(() => {
-    // Fetch user data by userId
     const fetchUserData = async () => {
       try {
         const response = await api.get(`/users/${userId}`);
@@ -28,10 +26,7 @@ const EditUser = () => {
 
   const handleEditUser = async () => {
     try {
-      // Send updated user data to the server
       await api.put(`/users/${userId}`, userData);
-      // Redirect back to the user management page after editing
-      // You may replace this with your preferred navigation method
       navigate('/user-management');
     } catch (error) {
       console.error('Error editing user', error);
@@ -66,7 +61,7 @@ const EditUser = () => {
           onChange={handleInputChange}
         />
       </label>
-      {/* Add additional fields for editing user information */}
+      {}
       <button onClick={handleEditUser}>Save Changes</button>
     </div>
   );

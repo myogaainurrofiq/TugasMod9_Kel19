@@ -1,4 +1,3 @@
-// components/SignUp.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -16,11 +15,11 @@ const SignUp = () => {
         name,
         password,
       });
-      console.log('Signup successful:', response.data); // Log success response
+      console.log('Signup successful:', response.data); 
       setError(null);
     } catch (error) {
-      console.error('Signup error:', error); // Log the error for debugging
-      setError('Error during signup. Please try again.'); // Set error message
+      console.error('Signup error:', error);
+      setError('Error during signup. Please try again.');
     }
   };
 
