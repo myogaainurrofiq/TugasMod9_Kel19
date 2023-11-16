@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Yogzzzzzz",
+      "name": "M.Yoga Ainur Rofiq",
+      "password": "19"
+    },
+    {
+      "id": 2,
+      "username": "Yazeut",
+      "name": "Bainingtyas Kalifa Nurharyanti",
+      "password": "19"
+    },
+    {
+      "id": 3,
+      "username": "Dandhikaya",
+      "name": "Daniel Andhika Yudhistya",
+      "password": "19"
+    },
+    {
+      "id": 4,
+      "username": "Aghanr",
+      "name": "Anugerah Nur Rachmat",
+      "password": "19"
+    }
+  ]
+}
